@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::put('callback', function (Request $request) {
+    return new \GuzzleHttp\Psr7\Response(204);
 });
