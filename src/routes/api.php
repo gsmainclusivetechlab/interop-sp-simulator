@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::put('callback', function (Request $request) {
     return new \GuzzleHttp\Psr7\Response(204);
 });
+
+Route::post('{testCase?}', 'TransactionController@generate');
