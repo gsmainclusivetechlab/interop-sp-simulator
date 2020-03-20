@@ -6,7 +6,7 @@ use Carbon\Carbon;
 
 class BasePrecondition
 {
-    public $amount = 100;
+    public $amount = '100';
     public $currency = 'USD';
     public $type = 'merchantpay';
     public $subType = 'supermarket';
