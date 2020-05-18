@@ -1,5 +1,9 @@
-GSMA Service Provider Simulator. Powered by Laravel 
+GSMA Service Provider Simulator
 ===================================
+
+
+[![CircleCI Master](https://img.shields.io/circleci/build/github/gsmainclusivetechlab/interop-sp-simulator/master?label=Master&logo=circleCI&token=39af964dd2ce605e21a23434dc09d254b003ac34)](https://app.circleci.com/pipelines/github/gsmainclusivetechlab/interop-sp-simulator?branch=master)
+[![CircleCI Develop](https://img.shields.io/circleci/build/github/gsmainclusivetechlab/interop-sp-simulator/develop?label=Develop&logo=circleCI&token=39af964dd2ce605e21a23434dc09d254b003ac34)](https://app.circleci.com/pipelines/github/gsmainclusivetechlab/interop-sp-simulator?branch=develop)
 
 BASE STRUCTURE
 -------------------
