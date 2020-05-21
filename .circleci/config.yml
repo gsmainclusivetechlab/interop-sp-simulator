@@ -34,6 +34,10 @@ jobs:
       - run: 
           name: Install Componser dependecies
           command: make install
+
+      - run:
+          name: Run Tests
+          command: make test
       
       - save_cache:
           key: composer-v1-{{ checksum "src/composer.lock" }}
