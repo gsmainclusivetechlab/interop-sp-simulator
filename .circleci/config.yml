@@ -12,6 +12,7 @@ jobs:
         - master
         - develop
         - circleci-project-setup
+        - feature/tests
     
     steps:
       - checkout
@@ -34,6 +35,10 @@ jobs:
       - run: 
           name: Install Componser dependecies
           command: make install
+
+      - run:
+          name: Run Tests
+          command: make test
       
       - save_cache:
           key: composer-v1-{{ checksum "src/composer.lock" }}
@@ -50,3 +55,9 @@ jobs:
                 echo "Installation fail"
                 exit 2
             fi
+
+      #store tests and code coverage
+      - store_test_results:
+          path: src/tests/results
+      - store_artifacts:
+          path: src/tests/results
