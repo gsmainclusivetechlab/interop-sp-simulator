@@ -12,6 +12,7 @@ jobs:
         - master
         - develop
         - circleci-project-setup
+        - feature/tests
     
     steps:
       - checkout
@@ -54,3 +55,9 @@ jobs:
                 echo "Installation fail"
                 exit 2
             fi
+
+      #store tests and code coverage
+      - store_test_results:
+          path: src/tests/results
+      - store_artifacts:
+          path: src/tests/results
