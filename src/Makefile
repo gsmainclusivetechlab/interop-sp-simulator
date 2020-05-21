@@ -32,6 +32,9 @@ update: chmod composer-install cache-clear
 	php artisan migrate
 	php artisan queue:restart
 
+test:
+	php artisan test --testdox --log-junit tests/results/results.xml
+
 # Composer helpers
 ci: composer-install
 composer-install: composer-init

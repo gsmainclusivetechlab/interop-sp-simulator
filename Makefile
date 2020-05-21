@@ -100,8 +100,7 @@ xdebug-init:
 	fi	
 
 test:
-	@echo 'dummy test'
-
+	${DOCKER_COMPOSE_EXEC_WWW} app bash -c "make test"
 stop:
 	docker-compose down
 

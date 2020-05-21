@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="5" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="3.112668">
+    <testsuite name="Unit" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.096023">
+      <testsuite name="Tests\Unit\ExampleTest" file="/var/www/html/tests/Unit/ExampleTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.096023">
+        <testcase name="testBasicTest" class="Tests\Unit\ExampleTest" classname="Tests.Unit.ExampleTest" file="/var/www/html/tests/Unit/ExampleTest.php" line="14" assertions="1" time="0.096023"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="Feature" tests="4" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="3.016645">
+      <testsuite name="Tests\Feature\CallbackTest" file="/var/www/html/tests/Feature/CallbackTest.php" tests="4" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="3.016645">
+        <testcase name="testPutCallback" class="Tests\Feature\CallbackTest" classname="Tests.Feature.CallbackTest" file="/var/www/html/tests/Feature/CallbackTest.php" line="15" assertions="1" time="2.434898"/>
+        <testcase name="testGetCallback" class="Tests\Feature\CallbackTest" classname="Tests.Feature.CallbackTest" file="/var/www/html/tests/Feature/CallbackTest.php" line="28" assertions="1" time="0.192331"/>
+        <testcase name="testPostCallback" class="Tests\Feature\CallbackTest" classname="Tests.Feature.CallbackTest" file="/var/www/html/tests/Feature/CallbackTest.php" line="40" assertions="1" time="0.243585"/>
+        <testcase name="testDeleteCallback" class="Tests\Feature\CallbackTest" classname="Tests.Feature.CallbackTest" file="/var/www/html/tests/Feature/CallbackTest.php" line="52" assertions="1" time="0.145831"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
