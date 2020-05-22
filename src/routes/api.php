@@ -19,3 +19,5 @@ Route::put('callback', function (Request $request) {
 });
 
 Route::post('{testCase?}', 'TransactionController@generate');
+
+Route::post('/accounts/{identifierType}/{identifier}/authorisationcodes', 'AccountsController@store');
