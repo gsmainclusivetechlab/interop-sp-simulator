@@ -2,6 +2,7 @@ GSMA Service Provider Simulator
 ===================================
 
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/243f3a10625d455aa33a8294db7f659a)](https://app.codacy.com/gh/gsmainclusivetechlab/interop-sp-simulator?utm_source=github.com&utm_medium=referral&utm_content=gsmainclusivetechlab/interop-sp-simulator&utm_campaign=Badge_Grade_Settings)
 [![CircleCI Master](https://img.shields.io/circleci/build/github/gsmainclusivetechlab/interop-sp-simulator/master?label=Master&logo=circleCI&token=39af964dd2ce605e21a23434dc09d254b003ac34)](https://app.circleci.com/pipelines/github/gsmainclusivetechlab/interop-sp-simulator?branch=master)
 [![CircleCI Develop](https://img.shields.io/circleci/build/github/gsmainclusivetechlab/interop-sp-simulator/develop?label=Develop&logo=circleCI&token=39af964dd2ce605e21a23434dc09d254b003ac34)](https://app.circleci.com/pipelines/github/gsmainclusivetechlab/interop-sp-simulator?branch=develop)
 
