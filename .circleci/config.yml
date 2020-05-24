@@ -1,6 +1,8 @@
 # Interop Service Provider Simulator CircleCI
 
 version: 2
+orbs:
+  coverage-reporter: codacy/coverage-reporter@9.0.1
 jobs:
   build:
     machine:
@@ -11,8 +13,7 @@ jobs:
       only:
         - master
         - develop
-        - circleci-project-setup
-        - feature/tests
+        - codacy-code-coverage
     
     steps:
       - checkout
@@ -35,10 +36,6 @@ jobs:
       - run: 
           name: Install Componser dependecies
           command: make install
-
-      - run:
-          name: Run Tests
-          command: make test
       
       - save_cache:
           key: composer-v1-{{ checksum "src/composer.lock" }}
@@ -56,6 +53,18 @@ jobs:
                 exit 2
             fi
 
+      - run:
+          name: Run Tests
+          command: make test
+      
+      - run:
+          name: Run Tests Coverage
+          command: make test-coverage
+          
+      - coverage-reporter/send_report:
+          coverage-reports: 'tests/results/coverage-report-xml/index.xml'
+          project-token: $CODACY_PROJECT_TOKEN
+          
       #store tests and code coverage
       - store_test_results:
           path: src/tests/results
