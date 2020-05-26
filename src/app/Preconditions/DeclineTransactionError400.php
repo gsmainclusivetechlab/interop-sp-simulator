@@ -2,7 +2,7 @@
 
 namespace App\Preconditions;
 
-class DeclineTransactionError401 extends BasePrecondition
+class DeclineTransactionError400 extends BasePrecondition
 {
     public function __construct()
     {
