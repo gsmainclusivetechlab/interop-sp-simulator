@@ -2,7 +2,7 @@
 
 namespace App\Preconditions;
 
-class QuoteRejectedByMmo1 extends BasePrecondition
+class RejectedTransaction extends BasePrecondition
 {
     public function __construct()
     {

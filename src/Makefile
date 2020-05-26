@@ -34,6 +34,9 @@ update: chmod composer-install cache-clear
 
 test:
 	php artisan test --testdox --log-junit tests/results/results.xml
+    
+test-coverage:
+	phpdbg -qrr vendor/bin/phpunit --coverage-html tests/results/coverage-report-html --coverage-clover tests/results/coverage-report-clover/clover.xml
 
 # Composer helpers
 ci: composer-install
