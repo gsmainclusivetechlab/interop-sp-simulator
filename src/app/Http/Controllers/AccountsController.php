@@ -15,7 +15,7 @@ class AccountsController extends Controller
             [
                 'Accept' => 'application/json',
                 'Content-Type' => 'application/json',
-                'X-Date' => (new Carbon())->toRfc7231String(),
+                'X-Date' => (new Carbon())->toRfc3339String(),
             ],
             \GuzzleHttp\json_encode([
                 'codeState' => 'active',
