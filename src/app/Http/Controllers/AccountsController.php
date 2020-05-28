@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 class AccountsController extends Controller
 {
     public function store(
-        Request $request,
         $identifierType = null,
         $identifier = null
     ) {
