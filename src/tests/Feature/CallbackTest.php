@@ -15,14 +15,13 @@ class CallbackTest extends TestCase
     public function testPutCallback()
     {
         $response = $this->putJson('callback');
-                
-        $response->assertStatus(204);   
+
+        $response->assertStatus(204);
     }
 
-    
     /**
      * get callback returns 405
-     * 
+     *
      * @return void
      */
     public function testGetCallback()
@@ -34,7 +33,7 @@ class CallbackTest extends TestCase
 
     /**
      * post callback returns 200
-     * 
+     *
      * @return void
      */
     public function testPostCallback()
@@ -46,7 +45,7 @@ class CallbackTest extends TestCase
 
     /**
      * post callback returns 405
-     * 
+     *
      * @return void
      */
     public function testDeleteCallback()

@@ -27,8 +27,10 @@ class TransactionController extends Controller
             'X-Date' => (new Carbon())->toRfc7231String(),
             'X-Callback-URL' => config('app.url') . '/callback',
             'Accept' => 'application/json',
-        ])
-            ->post(Env::get('HOST_MMO1') . '/transactions', $precondition->getData());
+        ])->post(
+            Env::get('HOST_MMO1') . '/transactions',
+            $precondition->getData()
+        );
 
         return $response->json();
     }
