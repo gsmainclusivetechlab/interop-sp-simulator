@@ -13,6 +13,10 @@ class AccountsController extends Controller
         $identifierType = null,
         $identifier = null
     ) {
+        if (empty($identifierType) || empty($identifier)) {
+            return new Response(404);
+        }
+
         return new Response(
             201,
             [
