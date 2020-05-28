@@ -8,8 +8,11 @@ use Illuminate\Http\Request;
 
 class AccountsController extends Controller
 {
-    public function store(Request $request, $identifierType = null, $identifier = null)
-    {
+    public function store(
+        Request $request,
+        $identifierType = null,
+        $identifier = null
+    ) {
         return new Response(
             201,
             [

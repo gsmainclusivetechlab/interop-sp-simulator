@@ -18,13 +18,13 @@ class BasePrecondition
         [
             'key' => 'msisdn',
             'value' => '+33555123456',
-        ]
+        ],
     ];
     public $creditParty = [
         [
             'key' => 'msisdn',
             'value' => '+33555789123',
-        ]
+        ],
     ];
     public $senderKyc = [
         'nationality' => 'GB',
@@ -107,6 +107,6 @@ class BasePrecondition
 
     public function getData()
     {
-        return (array)$this;
+        return (array) $this;
     }
 }
