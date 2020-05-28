@@ -2,7 +2,7 @@
 
 version: 2.1
 orbs:
-  coverage-reporter: codacy/coverage-reporter@9.0.1
+  coverage-reporter: codacy/coverage-reporter@10.0.3
 jobs:
   build:
     machine:
