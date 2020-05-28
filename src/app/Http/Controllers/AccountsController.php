@@ -4,14 +4,11 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use GuzzleHttp\Psr7\Response;
-use Illuminate\Http\Request;
 
 class AccountsController extends Controller
 {
-    public function store(
-        $identifierType = null,
-        $identifier = null
-    ) {
+    public function store($identifierType = null, $identifier = null)
+    {
         if (empty($identifierType) || empty($identifier)) {
             return new Response(404);
         }

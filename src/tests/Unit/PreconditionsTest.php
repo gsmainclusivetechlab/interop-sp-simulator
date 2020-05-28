@@ -5,13 +5,12 @@ namespace Tests\Unit;
 use PHPUnit\Framework\TestCase;
 use App\Preconditions\Factory;
 
-
 class PreconditionsTest extends TestCase
 {
     /**
      * Base precondition amount check
      *
-     * @return void  
+     * @return void
      */
     public function testAuthorizedTransaction()
     {
@@ -24,9 +23,9 @@ class PreconditionsTest extends TestCase
 
     /**
      * Error 400 amount check
-     * 
+     *
      * @return void
-     * 
+     *
      **/
     public function testDeclineTransactionError400()
     {
@@ -39,7 +38,7 @@ class PreconditionsTest extends TestCase
 
     /**
      * Error 401 amount check
-     * 
+     *
      * @return void
      */
     public function testDeclineTransactionError401()
@@ -53,7 +52,7 @@ class PreconditionsTest extends TestCase
 
     /**
      * Error 404 amount check
-     * 
+     *
      * @return void
      */
     public function testDeclineTransactionError404()
@@ -67,7 +66,7 @@ class PreconditionsTest extends TestCase
 
     /**
      * Error 500 amount check
-     * 
+     *
      * @return void
      */
     public function testDeclineTransactionError500()
@@ -81,7 +80,7 @@ class PreconditionsTest extends TestCase
 
     /**
      * Error 503 amount check
-     * 
+     *
      * @return void
      */
     public function testDeclineTransactionError503()
@@ -95,7 +94,7 @@ class PreconditionsTest extends TestCase
 
     /**
      * Quote rejected by MMO1 amount check
-     * 
+     *
      * @return void
      */
     public function testQuoteRejectedByMmo1()
@@ -109,7 +108,7 @@ class PreconditionsTest extends TestCase
 
     /**
      * Rejected transaction amount check
-     * 
+     *
      * @return void
      */
     public function testRejectedTransation()
@@ -123,12 +122,14 @@ class PreconditionsTest extends TestCase
 
     /**
      * Rejected transaction amount check
-     * 
+     *
      * @return void
      */
     public function testTransactionRequestRejectedByPayerFsp()
     {
-        $precondition = Factory::instance('TransactionRequestRejectedByPayerFsp');
+        $precondition = Factory::instance(
+            'TransactionRequestRejectedByPayerFsp'
+        );
 
         $testdata = $precondition->getData();
 

@@ -14,42 +14,39 @@ use Tests\TestCase;
 
 class TransactionTest extends TestCase
 {
-    
     /**
      * no test case returns false
-     * 
+     *
      * @return void
      */
     public function testNoTestCase()
     {
         $response = $this->post('');
 
-        $response
-            ->assertJson([
-                'success' => false,
-                'message' => 'No such test case!',
-            ]);
+        $response->assertJson([
+            'success' => false,
+            'message' => 'No such test case!',
+        ]);
     }
 
-    
     /**
      * A basic feature test example.
      *
      * @test
      */
     public function testPostTransactions()
-    {        
-        $mock = new MockHandler([
-            new Response(202)
-        ]);
-        
+    {
+        $mock = new MockHandler([new Response(202)]);
+
         $handlerStack = HandlerStack::create($mock);
 
-        $client = new Client(["base_uri" => "http://localhost:8087", "handler" => $handlerStack]);
+        $client = new Client([
+            "base_uri" => "http://localhost:8087",
+            "handler" => $handlerStack,
+        ]);
 
         $response = $client->post('AuthorizedTransaction');
 
         $this->assertTrue($response->getStatusCode() == 202);
-        
     }
 }
