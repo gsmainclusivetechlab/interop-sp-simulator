@@ -65,7 +65,7 @@ jobs:
       - store_artifacts:
           path: src/tests/results
 
-test-coverage-run:
+  test-coverage-run:
     executor: test
     
     steps:
