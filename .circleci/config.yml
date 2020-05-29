@@ -84,7 +84,7 @@ jobs:
           name: Install Componser dependecies
           command: |
             cd src
-            make install
+            make composer-install
       
       - save_cache:
           key: composer-v1-{{ checksum "src/composer.lock" }}
