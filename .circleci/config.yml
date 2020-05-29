@@ -144,5 +144,6 @@ workflows:
             branches:
               only:
                 - master
+                - develop
           requires:
             - test-coverage-run
