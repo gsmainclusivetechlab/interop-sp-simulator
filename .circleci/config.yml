@@ -110,7 +110,7 @@ jobs:
     
     steps:
       - attach_workspace:
-          at: ~/repo/src/tests/results
+          at: ~/repo/src/tests
           
       - coverage-reporter/send_report:
           coverage-reports: src/tests/results/coverage-report-clover/clover.xml
