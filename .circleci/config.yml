@@ -101,16 +101,16 @@ jobs:
           path: src/tests/results
           
       - persist_to_workspace:      
-          root: src
+          root: ~/repo/src/tests
           paths:
-            - tests/results
+            - results
           
   test-coverage-codacy:
     executor: test
     
     steps:
       - attach_workspace:
-          at: /repo/src/tests/results
+          at: ~/repo/src/tests/results
           
       - coverage-reporter/send_report:
           coverage-reports: src/tests/results/coverage-report-clover/clover.xml
