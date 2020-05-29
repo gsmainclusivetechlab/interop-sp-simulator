@@ -42,7 +42,7 @@ jobs:
       - save_cache:
           key: composer-v1-{{ checksum "src/composer.lock" }}
           paths:
-            - vendor
+            - src/vendor
 
       - run: 
           name: Check installation
@@ -70,10 +70,6 @@ jobs:
     
     steps:
       - checkout
-
-      - run: 
-          name: Go to src folder
-          command: cd src
           
       - restore_cache: 
           keys:
@@ -82,16 +78,20 @@ jobs:
 
       - run: 
           name: Install Componser dependecies
-          command: make install
+          command: |
+            cd src
+            make install
       
       - save_cache:
           key: composer-v1-{{ checksum "src/composer.lock" }}
           paths:
-            - vendor
+            - src/vendor
 
       - run:
           name: Run Tests Coverage
-          command: make test-coverage
+          command: |
+            cd src
+            make test-coverage
           
       - store_artifacts:
           path: src/tests/results
