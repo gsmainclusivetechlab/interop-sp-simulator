@@ -69,6 +69,8 @@ jobs:
     executor: test
     
     steps:
+      - checkout
+
       - run: 
           name: Go to src folder
           command: cd src
