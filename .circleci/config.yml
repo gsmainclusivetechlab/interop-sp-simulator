@@ -70,6 +70,10 @@ jobs:
     
     steps:
       - checkout
+      
+      - run: 
+          name: Generate configuration files
+          command: make init
           
       - restore_cache: 
           keys:
