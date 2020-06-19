@@ -13,4 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', 'HomeController');
+
 Route::get('/health', 'HealthCheckController@getStatus');
